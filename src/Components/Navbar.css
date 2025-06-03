@@ -1,0 +1,8 @@
+#signup,#login{
+    padding: 7px;
+    border :2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+}
