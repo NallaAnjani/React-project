@@ -1,8 +1,27 @@
-#signup,#login{
-    padding: 7px;
-    border :2px solid black;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    background-color: blue;
+
+.custom-navbar {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  padding: 10px 0;
+}
+
+.brand-text {
+  font-weight: bold;
+  color: #fff !important;
+  font-size: 24px;
+}
+
+.nav-links .nav-link {
+  color: #fff !important;
+  margin-right: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: #f0db4f !important;
+  text-decoration: underline;
+}
+
+.auth-buttons .btn {
+  font-weight: 500;
 }
