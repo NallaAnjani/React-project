@@ -1,15 +1,17 @@
-import React from 'react'
-import Sidebar from './Sidebar/Sidebar'
-import "./UserDashboard.css"
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+
+import './UserDashboard.css';
+import UserSidebar from './UserSidebar/UserSidebar';
+
 const UserDashboard = () => {
   return (
-    <div id="userdashboard">
-      <div id="sidebar">
-        <Sidebar/>
-      </div>
-      <div id="mainbar" style={{color:"blue"}}>mainbar</div>
-    </div>
-  )
-}
 
-export default UserDashboard
+    <div className="user-dashboard">
+     
+    <UserSidebar/>
+    </div>
+  );
+};
+
+export default UserDashboard;

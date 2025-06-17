@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { authentication } from '../../config_details/Config_details';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'; 
 
 const Login = () => {
@@ -16,24 +16,36 @@ const Login = () => {
   });
 
   const handleLogin = async (e) => {
-    e.preventDefault();
-    const { email, password, role } = LoginDetails;
+  e.preventDefault();
+  const { email, password, role } = LoginDetails;
 
-    try {
-      const loggedinuser = await signInWithEmailAndPassword(authentication, email, password);
-      alert("Login successful!");
-
-      if (role === "admin") {
-        localStorage.setItem("loggedinAdmin", JSON.stringify(loggedinuser));
-      } else {
-        localStorage.setItem("loggedinUser", JSON.stringify(loggedinuser));
-      }
-
-      navigate(`/${role}Dashboard`);
-    } catch (err) {
-      console.log(err);
-    }
+  if (!email || !password || !role || role === "Choose your role") {
+    alert("Please fill all fields and select your role.");
+    return;
   }
+
+  try {
+    const loggedinuser = await signInWithEmailAndPassword(authentication, email, password);
+    alert("Login successful!");
+
+    if (role === "admin") {
+      localStorage.setItem("loggedinAdmin", JSON.stringify(loggedinuser));
+    } else {
+      localStorage.setItem("loggedinUser", JSON.stringify(loggedinuser));
+    }
+
+    navigate(`/${role}Dashboard`);
+  } catch (err) {
+    if (err.code === "auth/invalid-credential") {
+      alert("No user found. Please sign up first.");
+    } 
+     else {
+      alert("Login failed. Please check your credentials.");
+    }
+    console.error(err);
+  }
+};
+
 
   return (
     <div className="login-container">
@@ -67,6 +79,8 @@ const Login = () => {
         </Form.Select>
 
         <Button variant="primary" type="submit">Login</Button>
+     <Link to="/signup">Go to signup form</Link>
+        
       </Form>
     </div>
   );
