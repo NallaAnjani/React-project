@@ -29,13 +29,9 @@ const App = () => {
             <Route path="approve_reject" element={<ApproveRejectBookings/>}/>
             <Route path="edit_delete" element={<EditDeleteEvent/>}/>
           </Route>
-          <Route path='/userDashboard' element={<UserDashboard/>}>
-        <Route path="view-events" element={<ViewAllEvents/>}></Route>
-        <Route path="my-bookings" element={<MyBookings/>}></Route>
-        
-            
-          </Route>
-
+          <Route path='/userDashboard' element={<UserDashboard/>}></Route>
+              <Route path="/view-events" element={<ViewAllEvents/>}></Route>
+        <Route path="/my-bookings" element={<MyBookings/>}></Route>
          </Routes>
          
         

@@ -1,0 +1,27 @@
+.view-events-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap: 25px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  width: 100%;
+  border-radius: 10px;
+}
