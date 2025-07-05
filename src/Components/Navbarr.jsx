@@ -122,6 +122,8 @@ const Navbarr = () => {
               <>
                 <Nav.Link as={Link} to="/view-events">🎉 View Events</Nav.Link>
                 <Nav.Link as={Link} to="/my-bookings">🧾 My Bookings</Nav.Link>
+                <Nav.Link as={Link} to="/saved-events">Saved Events</Nav.Link>
+
               </>
             )}
           </Nav>
