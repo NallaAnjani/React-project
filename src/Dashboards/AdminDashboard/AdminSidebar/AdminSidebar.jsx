@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './AdminSidebar.css';
 
-// React Icons
+
 import { BsCalendarPlus, BsJournalText, BsCheck2Square, BsPencilSquare } from 'react-icons/bs';
 
 const AdminSidebar = () => {
@@ -13,7 +13,7 @@ const AdminSidebar = () => {
         <BsCalendarPlus className="icon" /> Add New Event
       </Link>
       <Link to="all_booking" className="sidebar-link">
-        <BsJournalText className="icon" /> View All Bookings
+        <BsJournalText className="icon" />   View All Approved Bookings
       </Link>
       <Link to="approve_reject" className="sidebar-link">
         <BsCheck2Square className="icon" /> Approve / Reject Bookings

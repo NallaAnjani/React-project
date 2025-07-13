@@ -77,6 +77,7 @@
           message: bookingDetails.message,
           phone: bookingDetails.phone,
           status: "pending",
+           image: selectedEvent.image, 
           createdAt: new Date(),
         };
 
