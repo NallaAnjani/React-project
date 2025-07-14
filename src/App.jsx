@@ -13,7 +13,8 @@ import {EditDeleteEvent} from './Dashboards/AdminDashboard/AdminSidebar/EditDele
 import ViewAllEvents from './Dashboards/UserDashboard/UserSidebar/ViewAllEvents/ViewAllEvents'
 import MyBookings from './Dashboards/UserDashboard/UserSidebar/MyBookings/MyBookings'
 import SavedEvents from './Dashboards/UserDashboard/UserSidebar/SavedEvents/savedEvents'
-import Carousels from './Components/Carousels/Carousels'
+
+import LandingPage from './Components/LandingPage/LandingPage'
 
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
      
          <Routes>
          
-          <Route path ="/" element={<Carousels/>}></Route>
+          
+          <Route path = "/" element={<LandingPage/>}></Route>
           <Route path ="/home" element={<Home/>}></Route>
           <Route path="/login" element={<Login/>}> </Route>
           <Route path="/signup" element={<Signup/>}> </Route>
@@ -39,6 +41,7 @@ const App = () => {
         <Route path="/saved-events" element={<SavedEvents/>}></Route>
         
          </Routes>
+         
          
         
     </div>

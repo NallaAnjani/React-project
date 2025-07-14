@@ -1,0 +1,47 @@
+.services-section {
+  background-color: #f5f7ff; /* Light bluish background */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0d47a1; /* Dark Blue */
+}
+
+.section-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.service-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(13, 71, 161, 0.2); /* Overlay Blue Shadow */
+}
+
+.service-card .card-title {
+  font-weight: bold;
+  color: #0d47a1;
+  font-size: 1.2rem;
+}
+
+.service-card .card-text {
+  font-size: 0.95rem;
+  color: #333;
+}

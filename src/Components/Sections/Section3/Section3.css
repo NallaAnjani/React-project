@@ -1,0 +1,53 @@
+.consult-wrapper {
+  background-color: white;
+  padding: 60px 20px;
+}
+
+.consult-text h2 {
+  color: #2c2c2c;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.consult-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-heading {
+  color: #a044a0; 
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  height: 45px;
+}
+
+.custom-button {
+  background-color: #a044a0;
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  font-weight: 600;
+}
+
+.custom-button:hover {
+  background-color: #902e90;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .consult-text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+.consult-text h2 {
+    font-size: 1.6rem;
+  }
+}
