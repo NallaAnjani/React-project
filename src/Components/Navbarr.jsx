@@ -127,7 +127,7 @@ const Navbarr = () => {
           <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
         </>
       );
-    } else if (location.pathname === '/') {
+    } else if (["/", "/home", "/about", "/services", "/contact","/login","/signup"].includes(location.pathname)) {
       return (
         <>
           <Nav.Link as={Link} to="/home">Home</Nav.Link>
@@ -144,7 +144,10 @@ const Navbarr = () => {
     <Navbar expand="lg" className="custom-navbar" sticky="top">
       <Container fluid className="nav-inner-container">
         {/* Brand Logo */}
+          {/* <img src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-9020-622f-bce1-c996e56d88b6/raw?se=2025-07-15T14%3A27%3A01Z&sp=r&sv=2024-08-04&sr=b&scid=bd80d3f7-631b-552d-bfe9-34591b15dd05&skoid=789f404f-91a9-4b2f-932c-c44965c11d82&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-15T10%3A14%3A36Z&ske=2025-07-16T10%3A14%3A36Z&sks=b&skv=2024-08-04&sig=eFa2eEDmkiX%2BelpqaD3q%2Bs2g/u1Bi/GKoMDnnSU8rhI%3D" alt="Anjani Events Logo" className="footer-logo" /> */}
+
         <Navbar.Brand as={Link} to="/" className="brand-text">
+
           Event Management
         </Navbar.Brand>
 

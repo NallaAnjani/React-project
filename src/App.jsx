@@ -15,6 +15,9 @@ import MyBookings from './Dashboards/UserDashboard/UserSidebar/MyBookings/MyBook
 import SavedEvents from './Dashboards/UserDashboard/UserSidebar/SavedEvents/savedEvents'
 
 import LandingPage from './Components/LandingPage/LandingPage'
+import About from './Components/About/About'
+import Services from './Components/Services/Services'
+import Contact from './Components/Contact/Contact'
 
 
 const App = () => {
@@ -27,6 +30,10 @@ const App = () => {
           
           <Route path = "/" element={<LandingPage/>}></Route>
           <Route path ="/home" element={<Home/>}></Route>
+          <Route path ="/about" element={<About/>}></Route>
+          <Route path ="/services" element={<Services/>}></Route>
+          <Route path ="/Contact" element={<Contact/>}></Route>
+
           <Route path="/login" element={<Login/>}> </Route>
           <Route path="/signup" element={<Signup/>}> </Route>
           <Route path='/adminDashboard' element={<AdminDashboard/>}>

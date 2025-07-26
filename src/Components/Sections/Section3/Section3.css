@@ -1,6 +1,8 @@
 .consult-wrapper {
   background-color: white;
   padding: 60px 20px;
+  display: flex;
+  gap:20px;
 }
 
 .consult-text h2 {

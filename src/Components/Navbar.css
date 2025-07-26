@@ -6,6 +6,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
+.footer-logo{
+  
+  height: 1vh;
+  width:5vw;
+  border-radius: 50%;
+}
 
 .brand-text {
   font-family: 'Montserrat', sans-serif;

@@ -8,9 +8,7 @@ const Section3 = () => {
       <Container>
         <Row className="align-items-center">
           {/* Left Heading */}
-          <Col md={6} className="consult-text">
-            <h2>Got a wedding in the works?<br />Let’s make some magic happen!</h2>
-          </Col>
+          
 
           {/* Right Form */}
           <Col md={6} className="consult-form">
@@ -49,8 +47,13 @@ const Section3 = () => {
                 Generate Free Proposal
               </Button>
             </Form>
+            
+          </Col>
+          <Col md={6} className="consult-text">
+            <h2>Got a wedding in the works?<br />Let’s make some magic happen!</h2>
           </Col>
         </Row>
+
       </Container>
     </div>
   );

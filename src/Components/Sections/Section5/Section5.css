@@ -1,58 +1,93 @@
-.contact-section {
-  background: #fff4f7; /* soft light pink */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.contact-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #3e1c59;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+.footer-logo{
+  
+  height: 10vh;
+}
+footer {
+  background-color: #0d47a1;
+  padding: 40px 20px;
+  color:white;
 }
 
-.contact-subheading {
-  color: #555;
-  font-size: 1rem;
-  max-width: 600px;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
   margin: auto;
+  color:white;
 }
 
-.contact-info {
-  background-color: #fce4ec;
-  border-radius: 10px;
-  color: #5c2a62;
-  font-size: 0.95rem;
+.footer-column {
+  flex: 1 1 200px;
+  margin: 20px;
 }
 
-.contact-info h4 {
-  font-weight: 600;
-  margin-bottom: 20px;
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color:white;
 }
 
-.contact-form {
-  background-color: #ffffff;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+.footer-column ul {
+  list-style: none;
 }
 
-.contact-btn {
-  background-color: #b71cb6;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 25px;
-  transition: background 0.3s ease;
+.footer-column ul li {
+  margin: 8px 0;
 }
 
-.contact-btn:hover {
-  background-color: #9c27b0;
+.footer-column ul li a {
+  text-decoration: none;
   color: white;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #d33682;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d33682;
+}
+
+.footer-column p {
+  margin: 8px 0;
+}
+
+.footer-column i {
+  margin-right: 10px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .contact-heading {
-    font-size: 1.5rem;
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .contact-info,
-  .contact-form {
-    padding: 20px;
+  .footer-column {
+    margin: 20px auto;
   }
 }
