@@ -12,12 +12,13 @@ import ApproveRejectBookings from './Dashboards/AdminDashboard/AdminSidebar/Appr
 import {EditDeleteEvent} from './Dashboards/AdminDashboard/AdminSidebar/EditDeleteEvent/EditDeleteEvent'
 import ViewAllEvents from './Dashboards/UserDashboard/UserSidebar/ViewAllEvents/ViewAllEvents'
 import MyBookings from './Dashboards/UserDashboard/UserSidebar/MyBookings/MyBookings'
-import SavedEvents from './Dashboards/UserDashboard/UserSidebar/SavedEvents/savedEvents'
+// import SavedEvents from './Dashboards/UserDashboard/UserSidebar/SavedEvents/savedEvents'
 
 import LandingPage from './Components/LandingPage/LandingPage'
 import About from './Components/About/About'
 import Services from './Components/Services/Services'
 import Contact from './Components/Contact/Contact'
+import SavedEvents from './Dashboards/UserDashboard/UserSidebar/SavedEvents/SavedEvents'
 
 
 const App = () => {
@@ -45,8 +46,8 @@ const App = () => {
           <Route path='/userDashboard' element={<UserDashboard/>}></Route>
               <Route path="/view-events" element={<ViewAllEvents/>}></Route>
         <Route path="/my-bookings" element={<MyBookings/>}></Route>
-        <Route path="/saved-events" element={<SavedEvents/>}></Route>
-        
+        {/* <Route path="/saved-events" element={<SavedEvents/>}></Route> */}
+        <Route path="/saved-events" element={<SavedEvents/>} ></Route>
          </Routes>
          
          
