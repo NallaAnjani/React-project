@@ -6,14 +6,22 @@ import './AdminDashboard.css';
 
 const AdminDashboard = () => {
   return (
-    <div className="admin-dashboard d-flex">
-      <div className="sidebar">
-        <AdminSidebar />
+    <div className="admin-layout">
+ 
+
+      <div className="admin-content-wrapper">
+        <div className="admin-sidebar-desktop">
+          <AdminSidebar />
+        </div>
+
+        <main className="admin-main-content">
+          <Outlet />
+        </main>
       </div>
-      <div className="mainbar p-4">
-        Admin Dashboard
-        <Outlet />
-      </div>
+
+      <footer className="admin-footer-mobile">
+        <AdminSidebar /> {/* Reuse same sidebar links here but styled horizontally */}
+      </footer>
     </div>
   );
 };

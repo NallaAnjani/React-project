@@ -119,14 +119,23 @@
 // }
 
 // export default ViewAllBookings
+
+
+
+
+
+
+
+
 import { collection, getDocs } from 'firebase/firestore';
-import React, { useState,useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react';
 import { db } from '../../../../config_details/Config_details';
+import { Container, Row, Col, Card, Spinner } from 'react-bootstrap';
 
 const ViewAllBookings = () => {
-  const [approvedBookings,setApprovedBookings] = useState([]);
-  const [loading,setLoading] = useState(true)
- 
+  const [approvedBookings, setApprovedBookings] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchApprovedBookings = async () => {
       const userRef = collection(db, 'users');
@@ -156,38 +165,41 @@ const ViewAllBookings = () => {
     fetchApprovedBookings();
   }, []);
 
-  if(loading){
-
-    return <p>loading...</p>
-    
+  if (loading) {
+    return (
+      <div className="text-center mt-4">
+        <Spinner animation="border" variant="primary" />
+        <p>Loading approved bookings...</p>
+      </div>
+    );
   }
-  return (
-    
-   <div className="approved-bookings-container">
-      <h2>Approved Bookings</h2>
-      {approvedBookings.length === 0 ? (
-        <p>No approved bookings found.</p>
-      ) : (
-        <div className="booking-cards">
-          {approvedBookings.map((b, i) => (
-            <div key={i} className="booking-card">
-              <img
-        src={b.image}
-        alt={b.eventTitle}
-        className="booking-image"
-      />
-              <h3>{b.eventTitle}</h3>
-              <p><strong>User:</strong> {b.userName}</p>
-              <p><strong>Date:</strong> {b.date}</p>
-              <p><strong>Guests:</strong> {b.guests}</p>
-              <p><strong>Phone:</strong> {b.phone}</p>
-              <p><strong>Status:</strong> ✅ Approved</p>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
-}
 
-export default ViewAllBookings
+  return (
+    <Container className="my-4">
+      <h2 className="text-center mb-4">Approved Bookings</h2>
+      {approvedBookings.length === 0 ? (
+        <p className="text-center">No approved bookings found.</p>
+      ) : (
+        <Row>
+          {approvedBookings.map((b, i) => (
+            <Col key={i} xs={12} sm={6} md={4} lg={3} className="mb-4">
+              <Card className="h-100 shadow-sm">
+                <Card.Img variant="top" src={b.image} alt={b.eventTitle} style={{ height: '200px', objectFit: 'cover' }} />
+                <Card.Body>
+                  <Card.Title>{b.eventTitle}</Card.Title>
+                  <Card.Text><strong>User:</strong> {b.userName}</Card.Text>
+                  <Card.Text><strong>Date:</strong> {b.date}</Card.Text>
+                  <Card.Text><strong>Guests:</strong> {b.guests}</Card.Text>
+                  <Card.Text><strong>Phone:</strong> {b.phone}</Card.Text>
+                  <Card.Text className="text-success"><strong>Status:</strong> ✅ Approved</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      )}
+    </Container>
+  );
+};
+
+export default ViewAllBookings;

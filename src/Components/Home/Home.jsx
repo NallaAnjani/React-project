@@ -10,7 +10,7 @@ const eventCategories = [
   {
     title: "Anniversary Events",
     description: "Make your special day extra special with tailored anniversary celebrations.",
-    image: "https://images.unsplash.com/photo-1578926375605-eaf7559b1458",
+    image: "https://www.truppandfest.com/assets/images/services-page/anniversary-event/trupp-and-fest-events-7.jpg",
   },
   
   {

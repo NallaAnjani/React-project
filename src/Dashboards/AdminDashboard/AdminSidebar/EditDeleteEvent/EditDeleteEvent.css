@@ -89,3 +89,38 @@
 .event-card button.edit:hover {
   background-color: #128aa2;
 }
+@media (max-width: 991px) {
+  .edit-delete-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .edit-delete-container {
+    grid-template-columns: 1fr; /* 1 column for mobile phones */
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .event-card img {
+    height: 180px; /* reduce image height for mobile */
+  }
+
+  .event-card h3 {
+    font-size: 1rem;
+  }
+
+  .event-card p {
+    font-size: 0.85rem;
+  }
+
+  .event-card-buttons {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .event-card button {
+    width: 100%;
+  }
+}
