@@ -148,7 +148,7 @@ const Navbarr = () => {
 
         <Navbar.Brand as={Link} to="/" className="brand-text">
 
-          Event Management
+          MomentsHub
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
